@@ -1,6 +1,7 @@
 # A600Reborn
 
-Amiga A600 schematics recpatured in KiCad and a new PCB design from them. Base version and S-Video version.
+Amiga A600 schematics recpatured in KiCad and a new PCB design from them. 
+There are currently two branches, Base version and S-Video version.
 
 Schematics and baseline PCB captured by Mick @ EAB. Checked and updated by myself.
 
