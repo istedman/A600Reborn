@@ -1,0 +1,9 @@
+(module MT7 (layer F.Cu) (tedit 5F898AEF)
+  (fp_text reference REF** (at 0 -4) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value MT7 (at 0 4) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (pad 1 connect rect (at 0 0) (size 7.112 6.096) (layers F.Cu F.Mask))
+)

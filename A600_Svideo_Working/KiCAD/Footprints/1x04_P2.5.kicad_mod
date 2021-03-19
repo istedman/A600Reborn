@@ -1,0 +1,16 @@
+(module 1x04_P2.5 (layer F.Cu) (tedit 5FB7D2FA)
+  (fp_text reference REF** (at 0 -2.25) (layer F.SilkS) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_text value 1x04_P2.5 (at 0 9.75) (layer F.Fab) hide
+    (effects (font (size 1 1) (thickness 0.15)))
+  )
+  (fp_line (start 2.65 8.75) (end -2.65 8.75) (layer F.SilkS) (width 0.12))
+  (fp_line (start -2.65 8.75) (end -2.65 -1.25) (layer F.SilkS) (width 0.12))
+  (fp_line (start -2.65 -1.25) (end 2.65 -1.25) (layer F.SilkS) (width 0.12))
+  (fp_line (start 2.65 -1.25) (end 2.65 8.75) (layer F.SilkS) (width 0.12))
+  (pad 2 thru_hole circle (at 0 2.5) (size 1.37 1.37) (drill 1) (layers *.Cu *.Mask))
+  (pad 1 thru_hole rect (at 0 0) (size 1.37 1.37) (drill 1) (layers *.Cu *.Mask))
+  (pad 3 thru_hole circle (at 0 5) (size 1.37 1.37) (drill 1) (layers *.Cu *.Mask))
+  (pad 4 thru_hole circle (at 0 7.5) (size 1.37 1.37) (drill 1) (layers *.Cu *.Mask))
+)

@@ -1,0 +1,719 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 12 12
+Title "AMIGA 600"
+Date "2019"
+Rev ""
+Comp "By Mick at English Amiga Board (http://eab.abime.net)"
+Comment1 "POWER DISTRIBUTION AND DECOUPLING"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Small RA951
+U 1 1 5DA9F40F
+P 10000 2650
+F 0 "RA951" V 10050 2700 25  0000 C CNN
+F 1 "4.7K" V 10050 2550 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 2650 50  0001 C CNN
+F 3 "~" H 10000 2650 50  0001 C CNN
+	1    10000 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RB951
+U 1 1 5DA9FBB3
+P 10000 2800
+F 0 "RB951" V 10050 2850 25  0000 C CNN
+F 1 "4.7K" V 10050 2700 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 2800 50  0001 C CNN
+F 3 "~" H 10000 2800 50  0001 C CNN
+	1    10000 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RC951
+U 1 1 5DA9FDF3
+P 10000 2950
+F 0 "RC951" V 10050 3000 25  0000 C CNN
+F 1 "4.7K" V 10050 2850 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 2950 50  0001 C CNN
+F 3 "~" H 10000 2950 50  0001 C CNN
+	1    10000 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RD951
+U 1 1 5DA9FF37
+P 10000 3100
+F 0 "RD951" V 10050 3150 25  0000 C CNN
+F 1 "4.7K" V 10050 3000 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 3100 50  0001 C CNN
+F 3 "~" H 10000 3100 50  0001 C CNN
+	1    10000 3100
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9800 2650 0    50   BiDi ~ 0
+_HLT
+Text GLabel 9800 2800 0    50   BiDi ~ 0
+_RST
+Text GLabel 9800 2950 0    50   BiDi ~ 0
+_LDS
+Text GLabel 9800 3100 0    50   BiDi ~ 0
+_UDS
+Text GLabel 9800 3250 0    50   BiDi ~ 0
+R_W
+Text GLabel 9800 3400 0    50   BiDi ~ 0
+_AS
+Wire Wire Line
+	9800 2650 9900 2650
+Wire Wire Line
+	9800 2800 9900 2800
+Wire Wire Line
+	9800 2950 9900 2950
+Wire Wire Line
+	9800 3100 9900 3100
+Wire Wire Line
+	9800 3250 9900 3250
+Wire Wire Line
+	9800 3400 9900 3400
+Wire Wire Line
+	10100 2650 10200 2650
+Wire Wire Line
+	10100 2800 10200 2800
+Wire Wire Line
+	10100 2950 10200 2950
+Wire Wire Line
+	10100 3100 10200 3100
+Wire Wire Line
+	10100 3250 10200 3250
+Wire Wire Line
+	10100 3400 10200 3400
+Connection ~ 10200 2650
+Wire Wire Line
+	10200 2650 10200 2800
+Connection ~ 10200 2800
+Wire Wire Line
+	10200 2800 10200 2950
+Connection ~ 10200 2950
+Wire Wire Line
+	10200 2950 10200 3100
+Connection ~ 10200 3100
+Wire Wire Line
+	10200 3100 10200 3250
+Connection ~ 10200 3250
+Wire Wire Line
+	10200 3250 10200 3400
+Text GLabel 9800 3700 0    50   Input ~ 0
+_DTACK
+Wire Wire Line
+	9800 3700 9900 3700
+Wire Wire Line
+	10100 3700 10200 3700
+Text Label 9800 4250 0    25   ~ 0
+_IPL1
+Text Label 9800 4100 0    25   ~ 0
+_IPL0
+Text GLabel 9500 4000 0    50   Input ~ 0
+_IPL[0..2]
+Wire Wire Line
+	9800 4400 9900 4400
+Wire Wire Line
+	9800 4250 9900 4250
+Wire Wire Line
+	9800 4100 9900 4100
+Text Label 9800 4400 0    25   ~ 0
+_IPL2
+Entry Wire Line
+	9700 4150 9800 4250
+Entry Wire Line
+	9700 4000 9800 4100
+Entry Wire Line
+	9700 4300 9800 4400
+Wire Bus Line
+	9700 4000 9500 4000
+Wire Wire Line
+	10200 3400 10200 3700
+Connection ~ 10200 3400
+Connection ~ 10200 3700
+Wire Wire Line
+	10100 4400 10200 4400
+Wire Wire Line
+	10100 4250 10200 4250
+Wire Wire Line
+	10100 4100 10200 4100
+Wire Wire Line
+	10200 3700 10200 4100
+Text GLabel 9800 4800 0    50   Output ~ 0
+_INT6
+Text GLabel 9800 4950 0    50   Output ~ 0
+_INT2
+Wire Wire Line
+	9800 4800 9900 4800
+Wire Wire Line
+	9800 4950 9900 4950
+Wire Wire Line
+	10100 4800 10200 4800
+Wire Wire Line
+	10100 4950 10200 4950
+Text Notes 9500 2000 0    50   ~ 0
+"BUS" TERMINATION
+$Comp
+L Device:C_Small C800
+U 1 1 5D3FCD7E
+P 2700 2450
+F 0 "C800" H 2750 2400 25  0000 L CNN
+F 1 "0.01uF" H 2750 2350 25  0000 L CNN
+F 2 "MyLibrary:SMD_1206" H 2700 2450 50  0001 C CNN
+F 3 "~" H 2700 2450 50  0001 C CNN
+	1    2700 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2550 2700 2600
+Wire Wire Line
+	2700 2600 3050 2600
+Wire Wire Line
+	2700 2350 2700 2000
+$Comp
+L Device:C_Small C803
+U 1 1 5D405FD9
+P 4150 2150
+F 0 "C803" H 4200 2100 25  0000 L CNN
+F 1 "0.01uF" H 4200 2050 25  0000 L CNN
+F 2 "MyLibrary:SMD_1206" H 4150 2150 50  0001 C CNN
+F 3 "~" H 4150 2150 50  0001 C CNN
+	1    4150 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C802
+U 1 1 5D406F9F
+P 4150 1850
+F 0 "C802" H 4200 1800 25  0000 L CNN
+F 1 "0.01uF" H 4200 1750 25  0000 L CNN
+F 2 "MyLibrary:SMD_1206" H 4150 1850 50  0001 C CNN
+F 3 "~" H 4150 1850 50  0001 C CNN
+	1    4150 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C801
+U 1 1 5D407F22
+P 4150 2750
+F 0 "C801" H 4200 2700 25  0000 L CNN
+F 1 "0.01uF" H 4200 2650 25  0000 L CNN
+F 2 "MyLibrary:SMD_1206" H 4150 2750 50  0001 C CNN
+F 3 "~" H 4150 2750 50  0001 C CNN
+	1    4150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2900 4150 2850
+Wire Wire Line
+	4150 2600 4150 2650
+Wire Wire Line
+	4150 2300 4150 2250
+Wire Wire Line
+	4150 2050 4150 2000
+Wire Wire Line
+	4150 1750 4150 1700
+Connection ~ 4150 1700
+Wire Wire Line
+	4150 1700 4550 1700
+$Comp
+L Device:C_Small C804
+U 1 1 5D4124D9
+P 4550 2750
+F 0 "C804" H 4600 2700 25  0000 L CNN
+F 1 "0.33uF" H 4600 2650 25  0000 L CNN
+F 2 "MyLibrary:SMD_1210" H 4550 2750 50  0001 C CNN
+F 3 "~" H 4550 2750 50  0001 C CNN
+	1    4550 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2900 4550 2900
+Wire Wire Line
+	4550 2900 4550 2850
+Wire Wire Line
+	4550 2650 4550 2600
+Wire Wire Line
+	4550 2600 4150 2600
+Connection ~ 4150 2600
+Connection ~ 4550 2600
+$Comp
+L Device:CP_Small C822
+U 1 1 5D417E4B
+P 4550 2150
+AR Path="/5D417E4B" Ref="C822"  Part="1" 
+AR Path="/5DA314AD/5D417E4B" Ref="C822"  Part="1" 
+F 0 "C822" H 4600 2100 25  0000 L CNN
+F 1 "47uF" H 4600 2050 25  0000 L CNN
+F 2 "MyLibrary:C_SMD_D6.3" H 4550 2150 50  0001 C CNN
+F 3 "~" H 4550 2150 50  0001 C CNN
+	1    4550 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C821
+U 1 1 5D41A95D
+P 4550 1850
+AR Path="/5D41A95D" Ref="C821"  Part="1" 
+AR Path="/5DA314AD/5D41A95D" Ref="C821"  Part="1" 
+F 0 "C821" H 4600 1800 25  0000 L CNN
+F 1 "47uF" H 4600 1750 25  0000 L CNN
+F 2 "MyLibrary:C_SMD_D6.3" H 4550 1850 50  0001 C CNN
+F 3 "~" H 4550 1850 50  0001 C CNN
+	1    4550 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 1950 4550 2000
+Wire Wire Line
+	4550 2250 4550 2300
+Wire Wire Line
+	4550 2300 4150 2300
+Connection ~ 4150 2300
+Wire Wire Line
+	4550 1750 4550 1700
+Connection ~ 4550 1700
+Wire Wire Line
+	4950 1700 4950 1750
+Connection ~ 4150 2000
+Wire Wire Line
+	4150 2000 4150 1950
+Wire Wire Line
+	4150 2000 4550 2000
+Connection ~ 4550 2000
+Wire Wire Line
+	4550 2000 4550 2050
+Wire Wire Line
+	4550 2900 4950 2900
+Connection ~ 4550 2900
+Wire Wire Line
+	4950 2600 4950 2550
+Wire Wire Line
+	4950 2900 4950 2850
+Wire Wire Line
+	4950 2600 4950 2650
+Connection ~ 4950 2600
+Text Notes 3500 1300 2    50   ~ 0
+POWER INPUT
+Connection ~ 4150 2900
+Connection ~ 4550 2300
+Wire Wire Line
+	4550 2300 4950 2300
+Wire Wire Line
+	4950 2300 4950 2250
+Connection ~ 3750 2000
+Wire Wire Line
+	3750 2000 4150 2000
+Connection ~ 3750 2900
+Wire Wire Line
+	3750 2900 4150 2900
+Wire Wire Line
+	4550 2600 4950 2600
+Wire Wire Line
+	4550 1700 4950 1700
+$Comp
+L Device:R_Small RF951
+U 1 1 5DAA022B
+P 10000 3400
+F 0 "RF951" V 10050 3450 25  0000 C CNN
+F 1 "4.7K" V 10050 3300 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 3400 50  0001 C CNN
+F 3 "~" H 10000 3400 50  0001 C CNN
+	1    10000 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RE951
+U 1 1 5DAA00C6
+P 10000 3250
+F 0 "RE951" V 10050 3300 25  0000 C CNN
+F 1 "4.7K" V 10050 3150 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 3250 50  0001 C CNN
+F 3 "~" H 10000 3250 50  0001 C CNN
+	1    10000 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RB954
+U 1 1 5DABB333
+P 10000 4950
+F 0 "RB954" V 10050 5000 25  0000 C CNN
+F 1 "1K" V 10050 4850 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 4950 50  0001 C CNN
+F 3 "~" H 10000 4950 50  0001 C CNN
+	1    10000 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RA954
+U 1 1 5DABB32D
+P 10000 4800
+F 0 "RA954" V 10050 4850 25  0000 C CNN
+F 1 "1K" V 10050 4700 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 4800 50  0001 C CNN
+F 3 "~" H 10000 4800 50  0001 C CNN
+	1    10000 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R952
+U 1 1 5DAA26E0
+P 10000 3700
+F 0 "R952" V 10050 3750 25  0000 C CNN
+F 1 "470" V 10050 3600 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 3700 50  0001 C CNN
+F 3 "~" H 10000 3700 50  0001 C CNN
+	1    10000 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RC953
+U 1 1 5DAB451C
+P 10000 4400
+F 0 "RC953" V 10050 4450 25  0000 C CNN
+F 1 "470" V 10050 4300 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 4400 50  0001 C CNN
+F 3 "~" H 10000 4400 50  0001 C CNN
+	1    10000 4400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RB953
+U 1 1 5DAB418A
+P 10000 4250
+F 0 "RB953" V 10050 4300 25  0000 C CNN
+F 1 "470" V 10050 4150 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 4250 50  0001 C CNN
+F 3 "~" H 10000 4250 50  0001 C CNN
+	1    10000 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small RA953
+U 1 1 5DAB3D1E
+P 10000 4100
+F 0 "RA953" V 10050 4150 25  0000 C CNN
+F 1 "470" V 10050 4000 25  0000 C CNN
+F 2 "MyLibrary:SMD_1206" H 10000 4100 50  0001 C CNN
+F 3 "~" H 10000 4100 50  0001 C CNN
+	1    10000 4100
+	0    -1   -1   0   
+$EndComp
+Text Notes 3200 4500 0    50   ~ 0
+GROUNDED HOLES
+Text Notes 6250 4500 0    50   ~ 0
+UNGROUNDED HOLES
+$Comp
+L MyLibrary:POWER CN8
+U 1 1 5D3F6003
+P 1850 2300
+AR Path="/5D3F6003" Ref="CN8"  Part="1" 
+AR Path="/5DA314AD/5D3F6003" Ref="CN8"  Part="1" 
+F 0 "CN8" H 1850 2700 50  0000 C CNN
+F 1 "POWER" H 1850 2600 50  0000 C CNN
+F 2 "MyLibrary:Power" H 1850 2300 50  0001 C CNN
+F 3 "" H 1850 2300 50  0001 C CNN
+	1    1850 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2300 3050 2300
+Wire Wire Line
+	2000 2150 2000 2000
+Wire Wire Line
+	2000 2000 2700 2000
+Connection ~ 2700 2000
+Wire Wire Line
+	1700 2150 1700 1700
+Wire Wire Line
+	1700 1700 3050 1700
+Wire Wire Line
+	2000 2450 2000 2600
+Wire Wire Line
+	2000 2600 2700 2600
+Connection ~ 2700 2600
+Wire Wire Line
+	1700 2450 1700 2900
+Wire Wire Line
+	1700 2900 3750 2900
+$Comp
+L Mechanical:MountingHole_Pad MT1
+U 1 1 5E843527
+P 3300 4750
+F 0 "MT1" V 3254 4900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 4900 50  0000 L CNN
+F 2 "MyLibrary:MT1-4" H 3300 4750 50  0001 C CNN
+F 3 "~" H 3300 4750 50  0001 C CNN
+	1    3300 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT2
+U 1 1 5E843ECD
+P 3300 4950
+F 0 "MT2" V 3254 5100 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 5100 50  0000 L CNN
+F 2 "MyLibrary:MT1-4" H 3300 4950 50  0001 C CNN
+F 3 "~" H 3300 4950 50  0001 C CNN
+	1    3300 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT3
+U 1 1 5E84678F
+P 3300 5150
+F 0 "MT3" V 3254 5300 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 5300 50  0000 L CNN
+F 2 "MyLibrary:MT1-4" H 3300 5150 50  0001 C CNN
+F 3 "~" H 3300 5150 50  0001 C CNN
+	1    3300 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT4
+U 1 1 5E8490F8
+P 3300 5350
+F 0 "MT4" V 3254 5500 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 5500 50  0000 L CNN
+F 2 "MyLibrary:MT1-4" H 3300 5350 50  0001 C CNN
+F 3 "~" H 3300 5350 50  0001 C CNN
+	1    3300 5350
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT5
+U 1 1 5E84BAD3
+P 3300 5550
+F 0 "MT5" V 3254 5700 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 5700 50  0000 L CNN
+F 2 "MyLibrary:MT5" H 3300 5550 50  0001 C CNN
+F 3 "~" H 3300 5550 50  0001 C CNN
+	1    3300 5550
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT6
+U 1 1 5E84E4AE
+P 3300 5750
+F 0 "MT6" V 3254 5900 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 5900 50  0000 L CNN
+F 2 "MyLibrary:MT6" H 3300 5750 50  0001 C CNN
+F 3 "~" H 3300 5750 50  0001 C CNN
+	1    3300 5750
+	0    1    1    0   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad MT7
+U 1 1 5E850DFA
+P 3300 5950
+F 0 "MT7" V 3254 6100 50  0000 L CNN
+F 1 "MountingHole_Pad" V 3345 6100 50  0000 L CNN
+F 2 "MyLibrary:MT7" H 3300 5950 50  0001 C CNN
+F 3 "~" H 3300 5950 50  0001 C CNN
+	1    3300 5950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3200 4750 3200 4950
+Connection ~ 3200 4950
+Wire Wire Line
+	3200 4950 3200 5150
+Connection ~ 3200 5150
+Wire Wire Line
+	3200 5150 3200 5350
+Connection ~ 3200 5350
+Wire Wire Line
+	3200 5350 3200 5550
+Connection ~ 3200 5550
+Wire Wire Line
+	3200 5550 3200 5750
+Connection ~ 3200 5750
+Wire Wire Line
+	3200 5750 3200 5950
+Connection ~ 3200 5950
+Wire Wire Line
+	3200 5950 3200 6050
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 5E86B268
+P 6400 4750
+F 0 "H1" H 6500 4796 50  0000 L CNN
+F 1 "MountingHole" H 6500 4705 50  0000 L CNN
+F 2 "MyLibrary:Hole" H 6400 4750 50  0001 C CNN
+F 3 "~" H 6400 4750 50  0001 C CNN
+	1    6400 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 5E86B836
+P 6400 4950
+F 0 "H2" H 6500 4996 50  0000 L CNN
+F 1 "MountingHole" H 6500 4905 50  0000 L CNN
+F 2 "MyLibrary:Hole" H 6400 4950 50  0001 C CNN
+F 3 "~" H 6400 4950 50  0001 C CNN
+	1    6400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 5E86E0D6
+P 6400 5150
+F 0 "H3" H 6500 5196 50  0000 L CNN
+F 1 "MountingHole" H 6500 5105 50  0000 L CNN
+F 2 "MyLibrary:Hole" H 6400 5150 50  0001 C CNN
+F 3 "~" H 6400 5150 50  0001 C CNN
+	1    6400 5150
+	1    0    0    -1  
+$EndComp
+Connection ~ 10200 4100
+Connection ~ 10200 4250
+Connection ~ 10200 4400
+Wire Wire Line
+	10200 4100 10200 4250
+Wire Wire Line
+	10200 4250 10200 4400
+Wire Wire Line
+	10200 4400 10200 4800
+Connection ~ 10200 4800
+Wire Wire Line
+	10200 4800 10200 4950
+Wire Wire Line
+	10200 2450 10200 2650
+Wire Wire Line
+	3750 2900 3750 2950
+$Comp
+L Device:CP_Small C811
+U 1 1 5D42FDA4
+P 4950 2750
+AR Path="/5D42FDA4" Ref="C811"  Part="1" 
+AR Path="/5DA314AD/5D42FDA4" Ref="C811"  Part="1" 
+F 0 "C811" H 5000 2700 25  0000 L CNN
+F 1 "1000uF" H 5000 2650 25  0000 L CNN
+F 2 "MyLibrary:C_RAD_P5" H 4950 2750 50  0001 C CNN
+F 3 "~" H 4950 2750 50  0001 C CNN
+	1    4950 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyLibrary:FERRITE LF1
+U 1 1 5E572683
+P 3250 1800
+F 0 "LF1" H 3250 2105 50  0000 C CNN
+F 1 "FERRITE" H 3250 2014 50  0000 C CNN
+F 2 "MyLibrary:Ferrite" H 3250 1700 50  0001 C CNN
+F 3 "~" H 3250 1700 50  0001 C CNN
+	1    3250 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1700 4150 1700
+Wire Wire Line
+	3050 2000 2700 2000
+Wire Wire Line
+	3450 2000 3750 2000
+Wire Wire Line
+	3450 2300 4150 2300
+Wire Wire Line
+	3450 2600 4150 2600
+$Comp
+L power:GND #PWR?
+U 1 1 5FA804E4
+P 3750 2950
+AR Path="/5E01FB57/5FA804E4" Ref="#PWR?"  Part="1" 
+AR Path="/5D611ECC/5FA804E4" Ref="#PWR?"  Part="1" 
+AR Path="/5DA314AD/5FA804E4" Ref="#PWR0270"  Part="1" 
+F 0 "#PWR0270" H 3750 2700 50  0001 C CNN
+F 1 "GND" H 3755 2777 50  0000 C CNN
+F 2 "" H 3750 2950 50  0001 C CNN
+F 3 "" H 3750 2950 50  0001 C CNN
+	1    3750 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0273
+U 1 1 5FA8FA8C
+P 1900 2650
+F 0 "#PWR0273" H 1900 2400 50  0001 C CNN
+F 1 "GND" V 1905 2522 50  0000 R CNN
+F 2 "" H 1900 2650 50  0001 C CNN
+F 3 "" H 1900 2650 50  0001 C CNN
+	1    1900 2650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FA965E3
+P 3200 6050
+AR Path="/5E01FB57/5FA965E3" Ref="#PWR?"  Part="1" 
+AR Path="/5D611ECC/5FA965E3" Ref="#PWR?"  Part="1" 
+AR Path="/5DA314AD/5FA965E3" Ref="#PWR0274"  Part="1" 
+F 0 "#PWR0274" H 3200 5800 50  0001 C CNN
+F 1 "GND" H 3205 5877 50  0000 C CNN
+F 2 "" H 3200 6050 50  0001 C CNN
+F 3 "" H 3200 6050 50  0001 C CNN
+	1    3200 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 2000 3750 2900
+$Comp
+L power:+12V #PWR0275
+U 1 1 5FC68A1E
+P 4950 1750
+F 0 "#PWR0275" H 4950 1600 50  0001 C CNN
+F 1 "+12V" H 4965 1923 50  0000 C CNN
+F 2 "" H 4950 1750 50  0001 C CNN
+F 3 "" H 4950 1750 50  0001 C CNN
+	1    4950 1750
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:-12V #PWR0276
+U 1 1 5FC69268
+P 4950 2250
+F 0 "#PWR0276" H 4950 2350 50  0001 C CNN
+F 1 "-12V" H 4965 2423 50  0000 C CNN
+F 2 "" H 4950 2250 50  0001 C CNN
+F 3 "" H 4950 2250 50  0001 C CNN
+	1    4950 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60A725F5
+P 4950 2550
+AR Path="/60A725F5" Ref="#PWR?"  Part="1" 
+AR Path="/5DA314AD/60A725F5" Ref="#PWR0278"  Part="1" 
+F 0 "#PWR0278" H 4950 2400 50  0001 C CNN
+F 1 "+5V" H 4965 2723 50  0000 C CNN
+F 2 "" H 4950 2550 50  0001 C CNN
+F 3 "" H 4950 2550 50  0001 C CNN
+	1    4950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60A771E1
+P 10200 2450
+AR Path="/60A771E1" Ref="#PWR?"  Part="1" 
+AR Path="/5DA314AD/60A771E1" Ref="#PWR0279"  Part="1" 
+F 0 "#PWR0279" H 10200 2300 50  0001 C CNN
+F 1 "+5V" H 10215 2623 50  0000 C CNN
+F 2 "" H 10200 2450 50  0001 C CNN
+F 3 "" H 10200 2450 50  0001 C CNN
+	1    10200 2450
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	9700 4000 9700 4300
+$EndSCHEMATC
